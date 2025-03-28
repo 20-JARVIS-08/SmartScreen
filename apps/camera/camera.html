@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <link rel="icon" href="/Images/camera_ico.jpg">
+    <link rel="stylesheet" href="camera.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="status-bar">
+        <span class="network">IR-MCI</span>
+        <span class="time" id="currentTime">Loading...</span>
+        <span class="status-icons"><i class="fa fa-signal"></i> 60% <i class="fa fa-battery-3"></i></span>
+    </div>
+
+
+    <div class="notification-bar" id="notificationBar">
+        <div class="sett_ico"><i class="fa fa-gear cursor_p"></i></div>
+        <div class="quick-settings">
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-wifi cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-bluetooth-b cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-volume-up cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-lock cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-plane cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa  fa-map-marker cursor_p"></i></div>
+        </div>
+
+        <div class="brightness-bar">
+            <div class="brightness-fill"></div>
+        </div>
+
+        <div class="control-buttons">
+            <button>Device control</button>
+            <button>Media output</button>
+        </div>
+
+        <div class="notifications">
+            <p>No notifications</p>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="/homescreen/homescreen_P.js"></script>
+
+    <div class="camera-container">
+        <video id="video" autoplay></video>
+        <div class="controls">
+            <a href="/apps/gallery/gallery.html">
+                <div class="gallery-btn">
+                </div>
+            </a>
+            <div class="capture-btn" id="capture"></div>
+            <div class="flip-btn" id="flip"><i class="fa fa-refresh"></i></div>
+        </div>
+    </div>
+
+    <canvas id="canvas" class="canvas-container"></canvas>
+    <script src="camera.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+.status-icons {
+    margin-right: 15px;
+}
+
+.status-bar {
+    zoom: 72%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #282828;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.notification-bar {
+    zoom: 85%;
+    width: 100%;
+    height: 0px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    position: absolute;
+    top: -700px;
+    left: 0;
+    transition: top 0.3s ease-in-out;
+    z-index: 11;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    padding-bottom: 20px;
+}
+
+.notification-bar.active {
+    top: 40px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 9;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.quick-settings {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.quick-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+
+.quick-icon.active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.brightness-bar {
+    width: 80%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.brightness-fill {
+    width: 50%;
+    height: 100%;
+    background: white;
+    transition: width 0.3s;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.control-buttons button {
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.notifications {
+    margin-top: 150px;
+    font-size: large;
+    color: lightgray;
+}
+
+.sett_ico {
+    zoom: 120%;
+    margin-top: 8px;
+    margin-left: 1280px;
+}
+
+
+header {
+    width: 100%;
+    padding: 20px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin-left: 50%;
+    text-align: center;
+    /* font-size: 24px; */
+}
+
+.profile-pic {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    background: url('/Images/profile.png') center/cover;
+    border-radius: 50%;
+}
+
+.search-bar {
+    width: 70%;
+    margin: 10px 0;
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.messages-list {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+.message:hover {
+    background: #1e1e1e;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: gray;
+    margin-right: 15px;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.content p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.date {
+    margin-left: auto;
+    font-size: 12px;
+    color: gray;
+}
+
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #1a73e8;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+    .message {
+        width: auto;
+    }
+
+    .quick-settings {
+        zoom: 120%;
+        gap: 8px;
+    }
+
+    .status-bar {
+        zoom: 103%;
+        font-size: 12px;
+        height: 35px;
+    }
+
+}

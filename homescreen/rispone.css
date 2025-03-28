@@ -1,0 +1,84 @@
+@media (max-width: 768px) {
+    .status-bar {
+        zoom: 165%;
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .quick-settings {
+        zoom: 180%;
+        gap: 8px;
+    }
+
+    .quick-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .control-buttons {
+        gap: 8px;
+    }
+
+    .control-buttons button {
+        padding: 8px 12px;
+        font-size: 20px;
+    }
+
+    .brightness-bar {
+        width: 90%;
+    }
+
+    .notifications {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .status-bar {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    .notification-bar {
+        margin-top: 20px;
+
+    }
+
+    .quick-settings {
+        gap: 5px;
+    }
+
+    .quick-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .control-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .control-buttons button {
+        width: 80%;
+        padding: 6px 10px;
+        font-size: 15px;
+    }
+
+    .brightness-bar {
+        width: 95%;
+    }
+
+    .notifications {
+        font-size: 20px;
+        margin-top: 300px;
+    }
+
+    .sett_ico {
+        display: none;
+    }
+
+}

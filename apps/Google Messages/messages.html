@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <!-- <link rel="stylesheet" href="/homescreen/rispone.css"> -->
+    <link rel="stylesheet" href="messages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="status-bar">
+        <span class="network">IR-MCI</span>
+        <span class="time" id="currentTime">Loading...</span>
+        <span class="status-icons"><i class="fa fa-signal"></i> 60% <i class="fa fa-battery-3"></i></span>
+    </div>
+
+
+    <div class="notification-bar" id="notificationBar">
+        <div class="sett_ico"><i class="fa fa-gear cursor_p"></i></div>
+        <div class="quick-settings">
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-wifi cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-bluetooth-b cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-volume-up cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-lock cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa fa-plane cursor_p"></i></div>
+            <div class="quick-icon" onclick="toggleActive(this)"><i class="fa  fa-map-marker cursor_p"></i></div>
+        </div>
+
+        <div class="brightness-bar">
+            <div class="brightness-fill"></div>
+        </div>
+
+        <div class="control-buttons">
+            <button>Device control</button>
+            <button>Media output</button>
+        </div>
+
+        <div class="notifications">
+            <p>No notifications</p>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div style="height:50px;"></div>
+    <header style="background-color: #111111;">
+        <p style="margin-left: 20px;">Messages</p>
+        <div class="profile-pic"></div>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="search ..." id="searchInput">
+    </div>
+
+    <div class="messages-list" id="messagesList">
+        <div class="message">
+            <div class="avatar user2"></div>
+            <div class="content">
+                <h2>Best friend</h2>
+                <p>Hello, I called you yesterday...</p>
+            </div>
+            <span class="date">Today</span>
+        </div>
+        <div class="message">
+            <div class="avatar user1"></div>
+            <div class="content">
+                <h2>Jack</h2>
+                <p>Where are you? I arrived 🙁</p>
+            </div>
+            <span class="date">Yesterday</span>
+        </div>
+
+
+        <div class="message">
+            <div class="avatar user3"></div>
+            <div class="content">
+                <h2>Meta support</h2>
+                <p>We have reviewed your account...</p>
+            </div>
+            <span class="date">Wednesday</span>
+        </div>
+
+        <div class="message">
+            <div class="avatar user4"></div>
+            <div class="content">
+                <h2>Bank</h2>
+                <p> Move 606373*0569...</p>
+            </div>
+            <span class="date">Monday</span>
+        </div>
+
+        <div class="message">
+            <div class="avatar user4"></div>
+            <div class="content">
+                <h2>No name</h2>
+                <p>ََِad..</p>
+            </div>
+            <span class="date">Saturday</span>
+        </div>
+
+        <div class="message">
+            <div class="avatar user4"></div>
+            <div class="content">
+                <h2>amazon</h2>
+                <p>Your order is waiting in the queue...</p>
+            </div>
+            <span class="date">1 Oct</span>
+        </div>
+
+        <div class="message">
+            <div class="avatar user4"></div>
+            <div class="content">
+                <h2>Gmail</h2>
+                <p>Welcome, your account is ready....</p>
+            </div>
+            <span class="date">28 Sep</span>
+        </div>
+
+        <div class="message">
+            <div class="avatar user4"></div>
+            <div class="content">
+                <h2>Facebook</h2>
+                <p>Code: 53614</p>
+            </div>
+            <span class="date">26 Sep</span>
+        </div>
+
+        <div class="message">
+            <div class="avatar user4"></div>
+            <div class="content">
+                <h2>Google</h2>
+                <p>This code is secret..Code:5361....</p>
+            </div>
+            <span class="date">26 Sep</span>
+        </div>
+
+    </div>
+
+    <button class="fab"><i class="fa fa-envelope-o"></i></button>
+
+    <script src="messages.js"></script>
+</body>
+
+</html>
